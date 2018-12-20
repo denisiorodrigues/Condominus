@@ -16,6 +16,8 @@ namespace DR.Domain.Models
         public string Cidade { get; set; }
         public string Estado { get; set; }
 
+        public virtual Cliente Cliente { get; set; }
+
         public override bool EhValido()
         {
             throw new NotImplementedException();

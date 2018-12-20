@@ -17,7 +17,7 @@ namespace DR.Domain.Models
         public bool Ativo { get; set; }
         public bool Excluido { get; set; }
 
-        public ICollection<Endereco> Enderecos { get; set; }
+        public virtual ICollection<Endereco> Enderecos { get; set; }
 
         public void DefinirComoExcluido()
         {
