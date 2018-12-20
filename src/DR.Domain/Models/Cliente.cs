@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DR.Domain.Models
 {
-    public class Morador : Entity
+    public class Cliente : Entity
     {
         public string Nome { get; set; }
         public string SobreNome { get; set; }

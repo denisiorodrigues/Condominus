@@ -36,7 +36,7 @@
   <ItemGroup>
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\Entity.cs" />
-    <Compile Include="Models\Morador.cs" />
+    <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Residencia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
