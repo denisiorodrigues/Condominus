@@ -15,6 +15,7 @@ namespace DR.Domain.Models
         public string CEP { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
+        public Guid ClienteId { get; set; }
 
         public virtual Cliente Cliente { get; set; }
 
