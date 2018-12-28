@@ -32,11 +32,11 @@ namespace DR.Condominus.Infra.Data.Context
             modelBuilder.Configurations.Add(new EnderecoMapping());
 
             //modelBuilder.HasDefaultSchema("NomeSchema");
-            //base.OnModelCreating(modelBuilder, "NovoSchema");// COnfigurando um novo Schema
+            //base.OnModelCreating(modelBuilder, "NovoSchema");// Configurando um novo Schema
 
             base.OnModelCreating(modelBuilder);
         }
-
+        
         public override int SaveChanges()
         {
             foreach (var entry in ChangeTracker.Entries()
