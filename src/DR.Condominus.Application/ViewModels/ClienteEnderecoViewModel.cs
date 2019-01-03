@@ -8,7 +8,7 @@ namespace DR.Condominus.Application.ViewModels
 {
     public class ClienteEnderecoViewModel
     {
-        public ClienteViewModel ClienteViewModel { get; set; }
-        public EnderecoViewModel EnderecoViewModel { get; set; }
+        public ClienteViewModel Cliente { get; set; }
+        public EnderecoViewModel Endereco { get; set; }
     }
 }

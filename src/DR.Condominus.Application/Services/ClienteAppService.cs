@@ -52,8 +52,8 @@ namespace DR.Condominus.Application.Services
 
         public ClienteEnderecoViewModel Adicionar(ClienteEnderecoViewModel clienteEnderecoViewModel)
         {
-            var cliente = Mapper.Map<Cliente>(clienteEnderecoViewModel.ClienteViewModel);
-            var endereco = Mapper.Map<Endereco>(clienteEnderecoViewModel.EnderecoViewModel);
+            var cliente = Mapper.Map<Cliente>(clienteEnderecoViewModel.Cliente);
+            var endereco = Mapper.Map<Endereco>(clienteEnderecoViewModel.Endereco);
 
             cliente.DefinirComoAtivo();
             cliente.AdicionaEndereco(endereco);

@@ -12,6 +12,10 @@ namespace DR.Condominus.Infra.Data.Context
 {
     public class CondominusContext : DbContext
     {
+        public CondominusContext() : base ("DefaultConnection")
+        {
+        }
+
         public DbSet<Cliente> Clientes { get; set; }
 
         public DbSet<Endereco> Enderecos { get; set; }
