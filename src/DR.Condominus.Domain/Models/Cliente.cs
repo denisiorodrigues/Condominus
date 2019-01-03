@@ -31,6 +31,11 @@ namespace DR.Domain.Models
             Excluido = false;
         }
 
+        public void AdicionaEndereco(Endereco endereco)
+        {
+            this.Enderecos.Add(endereco);
+        }
+
         public override bool EhValido()
         {
             if (String.IsNullOrWhiteSpace(this.Nome))
