@@ -47,5 +47,7 @@ namespace DR.Condominus.Application.ViewModels
         [DisplayFormat(ApplyFormatInEditMode =true, DataFormatString ="{0:yyyy-MM-dd}")]
         [DataType(DataType.Date, ErrorMessage = "Data formato inválido")]
         public DateTime DataNascimento { get; set; }
+
+        public bool Ativo { get; set; }
     }
 }

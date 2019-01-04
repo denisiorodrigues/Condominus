@@ -17,5 +17,7 @@ namespace DR.Condominus.UI.Site.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<DR.Condominus.Application.ViewModels.EnderecoViewModel> EnderecoViewModels { get; set; }
     }
 }

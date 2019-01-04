@@ -5,6 +5,11 @@ namespace DR.Domain.Models
 {
     public class Cliente : Entity
     {
+        public Cliente()
+        {
+            this.Enderecos = new List<Endereco>();
+        }
+
         public string Nome { get; set; }
         public string SobreNome { get; set; }
         public string Email { get; set; }
