@@ -8,7 +8,7 @@ namespace DR.Domain.Models
 {
     public class Endereco : Entity
     {
-        public string Logradoudo { get; set; }
+        public string Logradouro { get; set; }
         public string Numero { get; set; }
         public string Complemento { get; set; }
         public string Bairro { get; set; }
@@ -21,7 +21,13 @@ namespace DR.Domain.Models
 
         public override bool EhValido()
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(Logradouro))
+                AdicionarErroValidacao("Logradouro", "O logradouro não pode estar vazio!");
+
+            if (string.IsNullOrWhiteSpace(CEP))
+                AdicionarErroValidacao("CEP", "O CEP não pode estar vazio!");
+
+            return ValidationResult.Count == 0;
         }
     }
 }

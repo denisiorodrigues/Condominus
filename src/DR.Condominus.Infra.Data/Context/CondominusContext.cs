@@ -14,6 +14,10 @@ namespace DR.Condominus.Infra.Data.Context
     {
         public CondominusContext() : base ("DefaultConnection")
         {
+            //Melhorando a performance da aplicação
+            Configuration.ProxyCreationEnabled = false;
+            Configuration.LazyLoadingEnabled = false;
+            Configuration.AutoDetectChangesEnabled = false;
         }
 
         public DbSet<Cliente> Clientes { get; set; }
@@ -49,7 +53,7 @@ namespace DR.Condominus.Infra.Data.Context
                 if (entry.State == EntityState.Added)
                     entry.Property("DataCadastro").CurrentValue = DateTime.Now;
 
-                if (entry.State == EntityState.Added)
+                if (entry.State == EntityState.Modified)
                     entry.Property("DataCadastro").IsModified = false;
             }
 

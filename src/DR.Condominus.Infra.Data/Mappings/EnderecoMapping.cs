@@ -14,7 +14,7 @@ namespace DR.Condominus.Infra.Data.Mappings
         {
             HasKey(p => p.Id);
 
-            Property(p => p.Logradoudo)
+            Property(p => p.Logradouro)
                 .IsRequired()
                 .HasMaxLength(150);
 

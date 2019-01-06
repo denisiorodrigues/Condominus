@@ -11,7 +11,7 @@ namespace DR.Condominus.Application.ViewModels
     {
         public EnderecoViewModel()
         {
-            Id = new Guid();
+            Id = Guid.NewGuid();
         }
 
         [Key]
@@ -41,7 +41,6 @@ namespace DR.Condominus.Application.ViewModels
         [MaxLength(8, ErrorMessage = "Máximo de 8 caracreres")]
         [MinLength(8, ErrorMessage = "Mínimo de 8 caracteres")]
         public string CEP { get; set; }
-
 
         [Required(ErrorMessage = "Prerencha o campo {0}")]
         [MaxLength(100, ErrorMessage = "Máximo de 100 caracreres")]
