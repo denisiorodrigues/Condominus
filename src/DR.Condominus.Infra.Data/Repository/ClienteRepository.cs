@@ -16,7 +16,7 @@ namespace DR.Condominus.Infra.Data.Repository
             //return Buscar(c => c.Ativo);
             //Dapper
             var sql = @"SELECT * FROM Clientes c 
-                        WHERE c.Excluido = 0 AND cAtivo = 1";
+                        WHERE c.Excluido = 0 AND c.Ativo = 1";
             return Db.Database.Connection.Query<Cliente>(sql);
         }
 
@@ -32,6 +32,7 @@ namespace DR.Condominus.Infra.Data.Repository
 
         public override Cliente ObterPorId(Guid id)
         {
+            throw new Exception("Treta foi instalada");
             //return Db.Clientes.AsNoTracking().Include("Enderecos").FirstOrDefault(c => c.Id == id) ;
             //Dapper
             var sql = @"SELECT * FROM Clientes c
